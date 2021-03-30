@@ -24,11 +24,11 @@ This lab will build upon your basic Adapter knowledge. You will create a custom 
 * Add an ImageView and three TextView elements. HINT: Use the following as a starting point and modify once you have that working:
 ```
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="match_parent">
 
 
     <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
@@ -36,7 +36,7 @@ This lab will build upon your basic Adapter knowledge. You will create a custom 
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/thumbnail"
+            android:id="@+id/category_thumbnail"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_alignParentStart="true"
@@ -49,7 +49,6 @@ This lab will build upon your basic Adapter knowledge. You will create a custom 
             android:text="CS"
             android:textAlignment="center"
             android:textSize="22dp"
-            tools:src="@mipmap/ic_launcher"
 
             />
 
@@ -97,7 +96,8 @@ This lab will build upon your basic Adapter knowledge. You will create a custom 
                 tools:text="Subtitle" />
         </RelativeLayout>
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
 ```
 * Modifying the thumbnail to be an ImageView will be the **Challenge**. Get the version with TextView workking first. You can use [icons8.com](https://icons8.com/) for icons. I think 96 by 96 is a good size to get.
 * Create a Java reference to the ListView in **MainActivity.java**.
