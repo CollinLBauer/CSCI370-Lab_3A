@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Advanced Adapter Lab</string>
+    <string name="category_description">Desc</string>
+    <string name="category_text">CS</string>
+
+    <string-array name="test_student_first">
+        <item>John</item>
+        <item>Jane</item>
+        <item>Steve</item>
+        <item>Jeff</item>
+        <item>Nancy</item>
+    </string-array>
+    <string-array name="test_student_last">
+        <item>Doe</item>
+        <item>Smith</item>
+        <item>Kent</item>
+        <item>Winger</item>
+        <item>Drew</item>
+    </string-array>
+    <string-array name="test_student_major">
+        <item>MATH</item>
+        <item>DATA</item>
+        <item>CSCI</item>
+        <item>CIS</item>
+        <item>CITA</item>
+    </string-array>
+</resources>
