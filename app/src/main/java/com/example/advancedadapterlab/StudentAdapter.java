@@ -24,23 +24,19 @@ public class StudentAdapter extends BaseAdapter {
 
 
     public StudentAdapter(Context context, Student[] students) {
-        Log.i(TAG, "StudentAdapter constructor");
         mContext = context;
         mDataSource = new ArrayList<>(Arrays.asList(students));
         mInflater = (LayoutInflater) mContext.getSystemService((Context.LAYOUT_INFLATER_SERVICE));
-        Log.i(TAG, "  constructor done");
 
     }
 
     @Override
     public int getCount() {
-        Log.i(TAG, "getCount()");
         return mDataSource.size();
     }
 
     @Override
     public Object getItem(int position) {
-        Log.i(TAG, "getItem()");
         return mDataSource.get(position);
     }
 
@@ -52,9 +48,12 @@ public class StudentAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Log.i(TAG, "getView()");
+        // Other examples I've seen of this use convertView instead of this rowView object.
+        // Also, my linter does not like this method of inflating the row view,
+        //   without putting it in a conditional statement, i.e.
+        //   if convertView == null, THEN inflate a new view.
+        // Should we be doing that instead?
         View rowView = mInflater.inflate(R.layout.list_view_row, parent, false);
-        Log.i(TAG, "  rowView set");
 
         // get this view's data
         Student student = (Student) getItem(position);

@@ -9,7 +9,13 @@
     <ListView
         android:id="@+id/student"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:dividerHeight="5.0sp"
+        android:divider="@android:color/black"
+        android:padding="2sp"
+        android:background="@color/purple_700"
+        android:layout_margin="43sp"
+        >
     </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

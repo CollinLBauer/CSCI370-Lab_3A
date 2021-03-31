@@ -3,9 +3,15 @@ package com.example.advancedadapterlab;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,15 +40,25 @@ public class MainActivity extends AppCompatActivity {
             students[i] = new Student(first[i], last[i], major[i]);
         }
 
-
         // set adapter for studentListView
-        Log.i(TAG, "  Create adapter...");
         myAdapter = new StudentAdapter(context, students);
-        Log.i(TAG, "  Get list view...");
         studentListView = findViewById(R.id.student);
-        Log.i(TAG, "  Set list view adapter...");
         studentListView.setAdapter(myAdapter);
 
-        Log.i(TAG, "Done.");
+        Toast toast = Toast.makeText(context, "", Toast.LENGTH_SHORT);
+
+        studentListView.setOnItemClickListener((parent, view, position, id) -> {
+            toast.setText(getResources().getString(R.string.toast_short));
+            toast.show();
+            Log.i(TAG, "onItemClick");
+        });
+        studentListView.setOnItemLongClickListener((parent, view, position, id) -> {
+            toast.setText(getResources().getString(R.string.toast_long));
+            toast.show();
+            Log.i(TAG, "onItemLooooooooongClick");
+            return true;
+        });
+
+
     }
 }

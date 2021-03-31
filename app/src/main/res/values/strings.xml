@@ -24,4 +24,7 @@
         <item>CIS</item>
         <item>CITA</item>
     </string-array>
+
+    <string name="toast_long">Looooooooooong click!</string>
+    <string name="toast_short">Short click!</string>
 </resources>
